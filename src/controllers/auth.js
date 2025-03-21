@@ -3,7 +3,6 @@ const jwt = require("jsonwebtoken");
 const cookie = require("cookie-parser");
 const handleResponse = require("../helper/response");
 
-
 const login = async function (req, res, next) {
   const { email, password } = req.body;
   try {

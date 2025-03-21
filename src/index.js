@@ -5,6 +5,7 @@ const sequelize = require("./models/index");
 const userRouter = require("./routers/userRouter");
 const authRouter = require("./routers/auth");
 const postRouter = require("./routers/posts");
+const commentRouter = require("./routers/comments");
 const cookieParser = require("cookie-parser");
 
 dotenv.config();
@@ -19,6 +20,7 @@ app.use(cors());
 app.use("/auth", authRouter);
 app.use("/users", userRouter);
 app.use("/posts", postRouter);
+app.use("/comments", commentRouter);
 
 app.listen(port, async () => {
   try {

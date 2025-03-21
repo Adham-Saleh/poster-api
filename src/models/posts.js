@@ -42,6 +42,6 @@ const Post = sequelize.define(
   }
 );
 
-Post.belongsTo(User, { foreignKey: "userId", as: "user" }); // Each post belongs to a user
+Post.belongsTo(User, { foreignKey: "userId", as: "user", onDelete: "CASCADE" }); // Each post belongs to a user
 
 module.exports = Post;
